@@ -1,0 +1,824 @@
+{
+ "generated": "2026-09-30T09:26:05+00:00",
+ "legislatura": "XV",
+ "meta": {
+  "source": "Congreso de los Diputados, Datos abiertos: votaciones del Pleno",
+  "period": "2023-09-19 / 2026-09-29",
+  "url": "https://www.congreso.es/es/opendata/votaciones",
+  "unit": "recuento",
+  "note": "todo lo descartado y por qué"
+ },
+ "descarga": {
+  "dias_en_calendario": 145,
+  "ficheros_enlazados": 2154,
+  "votaciones_con_fichero_listadas_en_html": 2154,
+  "http": {
+   "200": 2303
+  },
+  "errores": [],
+  "dias_sin_enlaces": [
+   "20230929",
+   "20230927",
+   "20231116",
+   "20240118"
+  ],
+  "tiempo_medio_s": 0.235,
+  "tiempo_max_s": 8.624
+ },
+ "lectura": {
+  "ficheros_leidos": 2154
+ },
+ "descartes": [],
+ "verificacion_html_vs_recuento": {
+  "metodo": "recuento propio de las filas nominales del JSON frente a los totales Sí/No/Abstenciones impresos en la página HTML del día",
+  "votaciones_comparadas": 2153,
+  "discrepancias": 0,
+  "sin_bloque_html": []
+ },
+ "votaciones_por_llamamiento_sin_fichero": [
+  {
+   "fecha": "2023-09-27",
+   "sesion": 5,
+   "texto": "Propuesta de don Alberto Núñez Feijóo como candidato a la Presidencia del Gobierno. (Pública por llamamiento)",
+   "si": 172,
+   "no": 178,
+   "abstencion": 0,
+   "tipo": "pública por llamamiento (totales en la web)",
+   "voto_individual": "sólo en el Diario de Sesiones (PDF)",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-5.PDF?#page=41"
+  },
+  {
+   "fecha": "2023-09-29",
+   "sesion": 6,
+   "texto": "Propuesta don Alberto Núñez Feijóo como candidato a la Presidencia del Gobierno. (Pública por llamamiento)",
+   "si": 172,
+   "no": 177,
+   "abstencion": 0,
+   "tipo": "pública por llamamiento (totales en la web)",
+   "voto_individual": "sólo en el Diario de Sesiones (PDF)",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-6.PDF?#page=17"
+  },
+  {
+   "fecha": "2023-11-16",
+   "sesion": 8,
+   "texto": "Propuesta de don Pedro Sánchez Pérez-Castejón como candidato a la Presidencia del Gobierno. (Pública por llamamiento)",
+   "si": 179,
+   "no": 171,
+   "abstencion": 0,
+   "tipo": "pública por llamamiento (totales en la web)",
+   "voto_individual": "sólo en el Diario de Sesiones (PDF)",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-8.PDF?#page=43"
+  },
+  {
+   "fecha": "2023-12-12",
+   "sesion": 11,
+   "texto": "Proposición de Ley del Grupo Parlamentario Socialista, Orgánica de amnistía para la normalización institucional, política y social en Cataluña. (Pública por llamamiento)",
+   "si": 178,
+   "no": 172,
+   "abstencion": 0,
+   "tipo": "pública por llamamiento (totales en la web)",
+   "voto_individual": "sólo en el Diario de Sesiones (PDF)",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-12.PDF?#page=95"
+  },
+  {
+   "fecha": "2023-12-19",
+   "sesion": 13,
+   "texto": "Elección de los Diputados a los que se refiere el Punto Tercero de la Resolución de la Presidencia del Congreso de los Diputados sobre secretos oficiales, de 26 de abril de 2022. (Votación por papeletas)",
+   "si": null,
+   "no": null,
+   "abstencion": null,
+   "tipo": "sin totales en la web (elección/votación secreta)",
+   "voto_individual": "no se publica",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-14.PDF?#page=108"
+  },
+  {
+   "fecha": "2024-01-10",
+   "sesion": 15,
+   "texto": "Proposición de Ley Orgánica de amnistía para la normalización institucional, política y social en Cataluña.",
+   "si": 171,
+   "no": 178,
+   "abstencion": 0,
+   "tipo": "pública por llamamiento (totales en la web)",
+   "voto_individual": "sólo en el Diario de Sesiones (PDF)",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-16.PDF?#page=112"
+  },
+  {
+   "fecha": "2024-01-10",
+   "sesion": 15,
+   "texto": "Real Decreto-ley 8/2023, de 27 de diciembre, por el que se adoptan medidas para afrontar las consecuencias económicas y sociales derivadas de los conflictos en Ucrania y Oriente Próximo, así como para paliar los efectos de la sequía. (Pública por llamamiento)",
+   "si": 172,
+   "no": 171,
+   "abstencion": 7,
+   "tipo": "pública por llamamiento (totales en la web)",
+   "voto_individual": "sólo en el Diario de Sesiones (PDF)",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-16.PDF?#page=120"
+  },
+  {
+   "fecha": "2024-01-10",
+   "sesion": 15,
+   "texto": "Acuerdo del Gobierno por el que se fijan los objetivos de estabilidad presupuestaria y de deuda pública para el conjunto de Administraciones Públicas y de cada uno de sus subsectores para el periodo 2024-2026 y el límite de gasto no financiero del presupuesto del Estado para el año 2024. Se votan los objetivos de estabilidad presupuestaria y de deuda pública propuestos por el Gobierno. (Pública por llamamiento)",
+   "si": 179,
+   "no": 171,
+   "abstencion": 0,
+   "tipo": "pública por llamamiento (totales en la web)",
+   "voto_individual": "sólo en el Diario de Sesiones (PDF)",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-16.PDF?#page=128"
+  },
+  {
+   "fecha": "2024-01-10",
+   "sesion": 15,
+   "texto": "Acuerdo del Gobierno por el que se remite a las Cortes Generales el Plan de Reequilibrio previsto en la Ley Orgánica 2/2012, de 27 de abril, de Estabilidad Presupuestaria y Sostenibilidad Financiera. Se vota el Plan de Reequilibrio. (Pública por llamamiento)",
+   "si": 179,
+   "no": 171,
+   "abstencion": 0,
+   "tipo": "pública por llamamiento (totales en la web)",
+   "voto_individual": "sólo en el Diario de Sesiones (PDF)",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-16.PDF?#page=135"
+  },
+  {
+   "fecha": "2024-01-18",
+   "sesion": 17,
+   "texto": "Votación de conjunto de la Proposición de Reforma del artículo 49 de la Constitución Española, por tramitarse en lectura única y tratarse de una Proposición de Reforma constitucional. (Pública por llamamiento)",
+   "si": 312,
+   "no": 32,
+   "abstencion": 0,
+   "tipo": "pública por llamamiento (totales en la web)",
+   "voto_individual": "sólo en el Diario de Sesiones (PDF)",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-18.PDF?#page=20"
+  },
+  {
+   "fecha": "2024-01-30",
+   "sesion": 18,
+   "texto": "Proposición de Ley Orgánica de amnistía para la normalización institucional, política y social en Cataluña.",
+   "si": 171,
+   "no": 179,
+   "abstencion": 0,
+   "tipo": "pública por llamamiento (totales en la web)",
+   "voto_individual": "sólo en el Diario de Sesiones (PDF)",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-20.PDF?#page=22"
+  },
+  {
+   "fecha": "2024-03-14",
+   "sesion": 29,
+   "texto": "Proposición de Ley Orgánica de amnistía para la normalización institucional, política y social en Cataluña.",
+   "si": 178,
+   "no": 172,
+   "abstencion": 0,
+   "tipo": "pública por llamamiento (totales en la web)",
+   "voto_individual": "sólo en el Diario de Sesiones (PDF)",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-32.PDF?#page=19"
+  },
+  {
+   "fecha": "2024-05-30",
+   "sesion": 43,
+   "texto": "Proposición de Ley Orgánica de amnistía para la normalización institucional, política y social en Cataluña. (Pública por llamamiento).",
+   "si": 177,
+   "no": 172,
+   "abstencion": 0,
+   "tipo": "pública por llamamiento (totales en la web)",
+   "voto_individual": "sólo en el Diario de Sesiones (PDF)",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-45.PDF?#page=25"
+  },
+  {
+   "fecha": "2024-07-23",
+   "sesion": 56,
+   "texto": "Propuesta de nombramiento de Vocales del Consejo General del Poder Judicial.",
+   "si": null,
+   "no": null,
+   "abstencion": null,
+   "tipo": "sin totales en la web (elección/votación secreta)",
+   "voto_individual": "no se publica",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-58.PDF?#page=141"
+  },
+  {
+   "fecha": "2024-07-23",
+   "sesion": 56,
+   "texto": "Propuesta de nombramiento de Vocales del Consejo General del Poder Judicial.",
+   "si": null,
+   "no": null,
+   "abstencion": null,
+   "tipo": "sin totales en la web (elección/votación secreta)",
+   "voto_individual": "no se publica",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-58.PDF?#page=141"
+  },
+  {
+   "fecha": "2024-09-26",
+   "sesion": 63,
+   "texto": "Elección de un Sr. Diputado, de conformidad con el Punto Tercero de la Resolución de la Presidencia del Congreso de los Diputados sobre secretos oficiales, de 26 de abril de 2022. (Votación por papeletas)",
+   "si": null,
+   "no": null,
+   "abstencion": null,
+   "tipo": "sin totales en la web (elección/votación secreta)",
+   "voto_individual": "no se publica",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-66.PDF?#page=80"
+  },
+  {
+   "fecha": "2024-11-12",
+   "sesion": 74,
+   "texto": "Elección de miembros del Consejo de Administración de la Corporación RTVE.",
+   "si": null,
+   "no": null,
+   "abstencion": null,
+   "tipo": "sin totales en la web (elección/votación secreta)",
+   "voto_individual": "no se publica",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-77.PDF?#page=16"
+  },
+  {
+   "fecha": "2024-11-14",
+   "sesion": 76,
+   "texto": "Elección de miembros del Consejo de Administración de la Corporación RTVE.",
+   "si": null,
+   "no": null,
+   "abstencion": null,
+   "tipo": "sin totales en la web (elección/votación secreta)",
+   "voto_individual": "no se publica",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-79.PDF?#page=37"
+  },
+  {
+   "fecha": "2024-11-26",
+   "sesion": 80,
+   "texto": "Elección del Presidente de la Corporación RTVE.",
+   "si": null,
+   "no": null,
+   "abstencion": null,
+   "tipo": "sin totales en la web (elección/votación secreta)",
+   "voto_individual": "no se publica",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-83.PDF?#page=10"
+  },
+  {
+   "fecha": "2024-11-26",
+   "sesion": 80,
+   "texto": "Elección de un Sr. Diputado, de conformidad con el Punto Tercero de la Resolución de la Presidencia del Congreso de los Diputados sobre secretos oficiales, de 26 de abril de 2022.",
+   "si": null,
+   "no": null,
+   "abstencion": null,
+   "tipo": "sin totales en la web (elección/votación secreta)",
+   "voto_individual": "no se publica",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-83.PDF?#page=10"
+  },
+  {
+   "fecha": "2024-11-28",
+   "sesion": 82,
+   "texto": "Elección del Presidente de la Corporación RTVE.",
+   "si": null,
+   "no": null,
+   "abstencion": null,
+   "tipo": "sin totales en la web (elección/votación secreta)",
+   "voto_individual": "no se publica",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-85.PDF?#page=57"
+  },
+  {
+   "fecha": "2025-06-19",
+   "sesion": 121,
+   "texto": "Elección de un Sr. Diputado, de conformidad con el Punto Tercero de la Resolución de la Presidencia del Congreso de los Diputados sobre secretos oficiales, de 26 de abril de 2022. (Votación por papeletas)",
+   "si": null,
+   "no": null,
+   "abstencion": null,
+   "tipo": "sin totales en la web (elección/votación secreta)",
+   "voto_individual": "no se publica",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-125.PDF?#page=29"
+  },
+  {
+   "fecha": "2025-10-16",
+   "sesion": 139,
+   "texto": "Elección de un Sr. Diputado, de conformidad con el Punto Tercero de la Resolución de la Presidencia del Congreso de los Diputados sobre secretos oficiales, de 26 de abril de 2022. (Votación por papeletas)",
+   "si": null,
+   "no": null,
+   "abstencion": null,
+   "tipo": "sin totales en la web (elección/votación secreta)",
+   "voto_individual": "no se publica",
+   "url_diario_sesiones": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-144.PDF?#page=32"
+  }
+ ],
+ "votaciones_asentimiento": [],
+ "votaciones_con_totales_sin_listado_nominal": [
+  {
+   "sesion": 89,
+   "fecha": "2025-01-22",
+   "numero": 5,
+   "titulo": "Dictamen de la Comisión del Estatuto de los Diputados.",
+   "totales": {
+    "asentimiento": "No",
+    "presentes": 345,
+    "afavor": 345,
+    "enContra": 0,
+    "abstenciones": 0,
+    "noVotan": 5
+   }
+  }
+ ],
+ "descuadres_totales_vs_recuento": [],
+ "votaciones_repetidas_consecutivas": [
+  {
+   "sesion": 34,
+   "fecha": "2024-04-09",
+   "numeros": [
+    14,
+    15
+   ],
+   "texto": "Moción consecuencia de interpelación urgente del Grupo Parlamentario Popular en el Congreso, sobre el impacto de las políticas del Gobierno sobre la fortaleza d",
+   "primera": {
+    "Sí": 171,
+    "No": 171,
+    "Abstención": 0,
+    "No vota": 7
+   },
+   "segunda": {
+    "Sí": 171,
+    "No": 172,
+    "Abstención": 0,
+    "No vota": 6
+   },
+   "empate_previo": true
+  },
+  {
+   "sesion": 70,
+   "fecha": "2024-10-23",
+   "numeros": [
+    6,
+    7
+   ],
+   "texto": "Proposición no de Ley del Grupo Parlamentario Popular en el Congreso, relativa a la revisión y readecuación de la normativa derivada del Real Decreto 933/2021, ",
+   "primera": {
+    "Sí": 172,
+    "No": 172,
+    "Abstención": 5,
+    "No vota": 1
+   },
+   "segunda": {
+    "Sí": 172,
+    "No": 172,
+    "Abstención": 4,
+    "No vota": 2
+   },
+   "empate_previo": true
+  },
+  {
+   "sesion": 70,
+   "fecha": "2024-10-23",
+   "numeros": [
+    7,
+    8
+   ],
+   "texto": "Proposición no de Ley del Grupo Parlamentario Popular en el Congreso, relativa a la revisión y readecuación de la normativa derivada del Real Decreto 933/2021, ",
+   "primera": {
+    "Sí": 172,
+    "No": 172,
+    "Abstención": 4,
+    "No vota": 2
+   },
+   "segunda": {
+    "Sí": 172,
+    "No": 172,
+    "Abstención": 5,
+    "No vota": 1
+   },
+   "empate_previo": true
+  },
+  {
+   "sesion": 70,
+   "fecha": "2024-10-23",
+   "numeros": [
+    9,
+    10
+   ],
+   "texto": "Proposición no de Ley del Grupo Parlamentario Popular en el Congreso, relativa a la revisión y readecuación de la normativa derivada del Real Decreto 933/2021, ",
+   "primera": {
+    "Sí": 172,
+    "No": 172,
+    "Abstención": 5,
+    "No vota": 1
+   },
+   "segunda": {
+    "Sí": 172,
+    "No": 173,
+    "Abstención": 4,
+    "No vota": 1
+   },
+   "empate_previo": true
+  },
+  {
+   "sesion": 70,
+   "fecha": "2024-10-23",
+   "numeros": [
+    15,
+    16
+   ],
+   "texto": "Moción consecuencia de interpelación urgente del Grupo Parlamentario Popular en el Congreso, sobre la implicación del Ministerio del Interior en los múltiples e",
+   "primera": {
+    "Sí": 171,
+    "No": 171,
+    "Abstención": 6,
+    "No vota": 2
+   },
+   "segunda": {
+    "Sí": 172,
+    "No": 171,
+    "Abstención": 5,
+    "No vota": 2
+   },
+   "empate_previo": true
+  },
+  {
+   "sesion": 88,
+   "fecha": "2024-12-19",
+   "numeros": [
+    37,
+    38
+   ],
+   "texto": "Proyecto de Ley de prevención de las pérdidas y el desperdicio alimentario. Enmiendas 243, 246 y 271.",
+   "primera": {
+    "Sí": 174,
+    "No": 174,
+    "Abstención": 0,
+    "No vota": 2
+   },
+   "segunda": {
+    "Sí": 178,
+    "No": 170,
+    "Abstención": 0,
+    "No vota": 2
+   },
+   "empate_previo": true
+  },
+  {
+   "sesion": 146,
+   "fecha": "2025-11-13",
+   "numeros": [
+    80,
+    81
+   ],
+   "texto": "Proyecto de Ley de Movilidad Sostenible. Enmienda al artículo 41.",
+   "primera": {
+    "Sí": 175,
+    "No": 175,
+    "Abstención": 0,
+    "No vota": 0
+   },
+   "segunda": {
+    "Sí": 175,
+    "No": 174,
+    "Abstención": 0,
+    "No vota": 1
+   },
+   "empate_previo": true
+  },
+  {
+   "sesion": 159,
+   "fecha": "2026-02-12",
+   "numeros": [
+    5,
+    6
+   ],
+   "texto": "Proposición no de Ley del Grupo Parlamentario Socialista, para la defensa de la legalidad internacional.",
+   "primera": {
+    "Sí": 169,
+    "No": 169,
+    "Abstención": 7,
+    "No vota": 5
+   },
+   "segunda": {
+    "Sí": 168,
+    "No": 171,
+    "Abstención": 7,
+    "No vota": 4
+   },
+   "empate_previo": true
+  },
+  {
+   "sesion": 164,
+   "fecha": "2026-02-26",
+   "numeros": [
+    3,
+    4
+   ],
+   "texto": "Proposición no de Ley del Grupo Parlamentario Popular en el Congreso, para la ejecución efectiva de las órdenes de expulsión de extranjeros nacionales de tercer",
+   "primera": {
+    "Sí": 171,
+    "No": 171,
+    "Abstención": 8,
+    "No vota": 0
+   },
+   "segunda": {
+    "Sí": 171,
+    "No": 171,
+    "Abstención": 8,
+    "No vota": 0
+   },
+   "empate_previo": true
+  },
+  {
+   "sesion": 164,
+   "fecha": "2026-02-26",
+   "numeros": [
+    4,
+    5
+   ],
+   "texto": "Proposición no de Ley del Grupo Parlamentario Popular en el Congreso, para la ejecución efectiva de las órdenes de expulsión de extranjeros nacionales de tercer",
+   "primera": {
+    "Sí": 171,
+    "No": 171,
+    "Abstención": 8,
+    "No vota": 0
+   },
+   "segunda": {
+    "Sí": 170,
+    "No": 171,
+    "Abstención": 8,
+    "No vota": 1
+   },
+   "empate_previo": true
+  },
+  {
+   "sesion": 172,
+   "fecha": "2026-04-15",
+   "numeros": [
+    2,
+    3
+   ],
+   "texto": "Proposición no de Ley del Grupo Parlamentario Socialista, para documentar el \"bibliocausto español\" y reconocer el compromiso con la cultura de libreros, biblio",
+   "primera": {
+    "Sí": 169,
+    "No": 169,
+    "Abstención": 8,
+    "No vota": 4
+   },
+   "segunda": {
+    "Sí": 169,
+    "No": 169,
+    "Abstención": 8,
+    "No vota": 4
+   },
+   "empate_previo": true
+  },
+  {
+   "sesion": 172,
+   "fecha": "2026-04-15",
+   "numeros": [
+    3,
+    4
+   ],
+   "texto": "Proposición no de Ley del Grupo Parlamentario Socialista, para documentar el \"bibliocausto español\" y reconocer el compromiso con la cultura de libreros, biblio",
+   "primera": {
+    "Sí": 169,
+    "No": 169,
+    "Abstención": 8,
+    "No vota": 4
+   },
+   "segunda": {
+    "Sí": 170,
+    "No": 169,
+    "Abstención": 7,
+    "No vota": 4
+   },
+   "empate_previo": true
+  },
+  {
+   "sesion": 177,
+   "fecha": "2026-04-30",
+   "numeros": [
+    2,
+    3
+   ],
+   "texto": "Proposición no de Ley del Grupo Parlamentario Popular en el Congreso, relativa a los retrasos del Estado en infraestructuras y actuaciones hídricas en Andalucía",
+   "primera": {
+    "Sí": 170,
+    "No": 170,
+    "Abstención": 1,
+    "No vota": 9
+   },
+   "segunda": {
+    "Sí": 172,
+    "No": 171,
+    "Abstención": 0,
+    "No vota": 7
+   },
+   "empate_previo": true
+  },
+  {
+   "sesion": 185,
+   "fecha": "2026-06-11",
+   "numeros": [
+    32,
+    33
+   ],
+   "texto": "Moción consecuencia de interpelación urgente del Grupo Parlamentario Popular en el Congreso, sobre el desempeño de la Ministra de Inclusión, Seguridad Social y ",
+   "primera": {
+    "Sí": 170,
+    "No": 170,
+    "Abstención": 8,
+    "No vota": 2
+   },
+   "segunda": {
+    "Sí": 170,
+    "No": 170,
+    "Abstención": 8,
+    "No vota": 2
+   },
+   "empate_previo": true
+  },
+  {
+   "sesion": 185,
+   "fecha": "2026-06-11",
+   "numeros": [
+    33,
+    34
+   ],
+   "texto": "Moción consecuencia de interpelación urgente del Grupo Parlamentario Popular en el Congreso, sobre el desempeño de la Ministra de Inclusión, Seguridad Social y ",
+   "primera": {
+    "Sí": 170,
+    "No": 170,
+    "Abstención": 8,
+    "No vota": 2
+   },
+   "segunda": {
+    "Sí": 170,
+    "No": 169,
+    "Abstención": 8,
+    "No vota": 3
+   },
+   "empate_previo": true
+  }
+ ],
+ "empates": [
+  {
+   "sesion": 15,
+   "fecha": "2024-01-10",
+   "numero": 4,
+   "si": 171,
+   "no": 171
+  },
+  {
+   "sesion": 15,
+   "fecha": "2024-01-10",
+   "numero": 5,
+   "si": 171,
+   "no": 171
+  },
+  {
+   "sesion": 15,
+   "fecha": "2024-01-10",
+   "numero": 6,
+   "si": 171,
+   "no": 171
+  },
+  {
+   "sesion": 34,
+   "fecha": "2024-04-09",
+   "numero": 14,
+   "si": 171,
+   "no": 171
+  },
+  {
+   "sesion": 70,
+   "fecha": "2024-10-23",
+   "numero": 6,
+   "si": 172,
+   "no": 172
+  },
+  {
+   "sesion": 70,
+   "fecha": "2024-10-23",
+   "numero": 7,
+   "si": 172,
+   "no": 172
+  },
+  {
+   "sesion": 70,
+   "fecha": "2024-10-23",
+   "numero": 8,
+   "si": 172,
+   "no": 172
+  },
+  {
+   "sesion": 70,
+   "fecha": "2024-10-23",
+   "numero": 9,
+   "si": 172,
+   "no": 172
+  },
+  {
+   "sesion": 70,
+   "fecha": "2024-10-23",
+   "numero": 15,
+   "si": 171,
+   "no": 171
+  },
+  {
+   "sesion": 88,
+   "fecha": "2024-12-19",
+   "numero": 37,
+   "si": 174,
+   "no": 174
+  },
+  {
+   "sesion": 146,
+   "fecha": "2025-11-13",
+   "numero": 80,
+   "si": 175,
+   "no": 175
+  },
+  {
+   "sesion": 159,
+   "fecha": "2026-02-12",
+   "numero": 5,
+   "si": 169,
+   "no": 169
+  },
+  {
+   "sesion": 164,
+   "fecha": "2026-02-26",
+   "numero": 3,
+   "si": 171,
+   "no": 171
+  },
+  {
+   "sesion": 164,
+   "fecha": "2026-02-26",
+   "numero": 4,
+   "si": 171,
+   "no": 171
+  },
+  {
+   "sesion": 172,
+   "fecha": "2026-04-15",
+   "numero": 2,
+   "si": 169,
+   "no": 169
+  },
+  {
+   "sesion": 172,
+   "fecha": "2026-04-15",
+   "numero": 3,
+   "si": 169,
+   "no": 169
+  },
+  {
+   "sesion": 177,
+   "fecha": "2026-04-30",
+   "numero": 2,
+   "si": 170,
+   "no": 170
+  },
+  {
+   "sesion": 185,
+   "fecha": "2026-06-11",
+   "numero": 32,
+   "si": 170,
+   "no": 170
+  },
+  {
+   "sesion": 185,
+   "fecha": "2026-06-11",
+   "numero": 33,
+   "si": 170,
+   "no": 170
+  }
+ ],
+ "diputados_sin_ficha_oficial": [],
+ "diputados_cruzados_por_alias": {},
+ "nombres_unificados_misma_persona": {
+  "Cuesta Rodríguez, María del Socorro": "Cuesta Rodríguez, María"
+ },
+ "homonimos_en_una_misma_votacion": [],
+ "diputados_en_ficha_sin_votaciones": [
+  {
+   "nombre": "Batet Lamaña, Meritxell",
+   "fecha_alta": "2023-08-16",
+   "fecha_baja": "2023-09-06"
+  },
+  {
+   "nombre": "Marín González, Luis Alberto",
+   "fecha_alta": "2023-08-10",
+   "fecha_baja": "2023-09-14"
+  }
+ ],
+ "nombres_repetidos_en_ficha": [],
+ "filas_sin_grupo": {
+  "Conesa Coma, Ignasi": 2,
+  "Santana Perera, Noemí": 2
+ },
+ "diputados_con_cambio_de_grupo": [
+  "Belarra Urteaga, Ione",
+  "Conesa Coma, Ignasi",
+  "Micó Micó, Àgueda",
+  "Ortega Smith-Molina, Francisco Javier",
+  "Santana Perera, Noemí",
+  "Sánchez Serna, Javier",
+  "Velarde Gómez, Martina",
+  "Verstrynge Revuelta, Lilith",
+  "Ábalos Meco, José Luis"
+ ],
+ "incoherencias_alta_baja_vs_votaciones": [],
+ "grupos_sin_posicion_por_empate": {
+  "GS": 0,
+  "GP": 0,
+  "GSUMAR": 0,
+  "GVOX": 0,
+  "GMx": 36,
+  "GJxCAT": 0,
+  "GR": 0,
+  "GEH Bildu": 0,
+  "GV (EAJ-PNV)": 0
+ }
+}

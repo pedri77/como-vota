@@ -1,0 +1,134 @@
+{
+ "generated": "2026-09-30T09:26:05+00:00",
+ "legislatura": "XV",
+ "legislatura_inicio": "2023-08-17",
+ "periodo": {
+  "desde": "2023-09-19",
+  "hasta": "2026-09-29",
+  "meta": {
+   "source": "Congreso de los Diputados, Datos abiertos: votaciones del Pleno",
+   "period": "2023-09-19 / 2026-09-29",
+   "url": "https://www.congreso.es/es/opendata/votaciones",
+   "unit": "votaciones"
+  }
+ },
+ "votaciones_total": {
+  "value": 2154,
+  "meta": {
+   "source": "Congreso de los Diputados, Datos abiertos: votaciones del Pleno",
+   "period": "2023-09-19 / 2026-09-29",
+   "url": "https://www.congreso.es/es/opendata/votaciones",
+   "unit": "votaciones"
+  }
+ },
+ "votaciones_nominales": {
+  "value": 2153,
+  "meta": {
+   "source": "Congreso de los Diputados, Datos abiertos: votaciones del Pleno",
+   "period": "2023-09-19 / 2026-09-29",
+   "url": "https://www.congreso.es/es/opendata/votaciones",
+   "unit": "votaciones",
+   "note": "con listado de voto por diputado; base de todos los agregados"
+  }
+ },
+ "votaciones_asentimiento": {
+  "value": 0,
+  "meta": {
+   "source": "Congreso de los Diputados, Datos abiertos: votaciones del Pleno",
+   "period": "2023-09-19 / 2026-09-29",
+   "url": "https://www.congreso.es/es/opendata/votaciones",
+   "unit": "votaciones",
+   "note": "sin voto individual; excluidas de los agregados por diputado"
+  }
+ },
+ "sesiones_plenarias": {
+  "value": 143,
+  "meta": {
+   "source": "Congreso de los Diputados, Datos abiertos: votaciones del Pleno",
+   "period": "2023-09-19 / 2026-09-29",
+   "url": "https://www.congreso.es/es/opendata/votaciones",
+   "unit": "sesiones"
+  }
+ },
+ "dias_con_votaciones": {
+  "value": 141,
+  "meta": {
+   "source": "Congreso de los Diputados, Datos abiertos: votaciones del Pleno",
+   "period": "2023-09-19 / 2026-09-29",
+   "url": "https://www.congreso.es/es/opendata/votaciones",
+   "unit": "días"
+  }
+ },
+ "diputados_con_votaciones": {
+  "value": 410,
+  "meta": {
+   "source": "Congreso de los Diputados, Datos abiertos: votaciones del Pleno",
+   "period": "2023-09-19 / 2026-09-29",
+   "url": "https://www.congreso.es/es/opendata/votaciones",
+   "unit": "personas",
+   "note": "todos los que aparecen en algún listado nominal (incluye bajas y sustitutos)"
+  }
+ },
+ "escanos_por_votacion": {
+  "value": {
+   "349": 32,
+   "350": 2121
+  },
+  "meta": {
+   "source": "Congreso de los Diputados, Datos abiertos: votaciones del Pleno",
+   "period": "2023-09-19 / 2026-09-29",
+   "url": "https://www.congreso.es/es/opendata/votaciones",
+   "unit": "votaciones por tamaño del listado"
+  }
+ },
+ "votos_emitidos": {
+  "value": 745646,
+  "meta": {
+   "source": "Congreso de los Diputados, Datos abiertos: votaciones del Pleno",
+   "period": "2023-09-19 / 2026-09-29",
+   "url": "https://www.congreso.es/es/opendata/votaciones",
+   "unit": "votos"
+  }
+ },
+ "no_vota": {
+  "value": 7872,
+  "meta": {
+   "source": "Congreso de los Diputados, Datos abiertos: votaciones del Pleno",
+   "period": "2023-09-19 / 2026-09-29",
+   "url": "https://www.congreso.es/es/opendata/votaciones",
+   "unit": "votos",
+   "note": "categoría oficial «No vota»: ausencia o presencia sin voto; el Congreso no las distingue"
+  }
+ },
+ "histograma_margen": {
+  "value": {
+   "0-9": 513,
+   "10-19": 148,
+   "20-29": 69,
+   "30-39": 80,
+   "40-49": 52,
+   "50-59": 20,
+   "60-69": 17,
+   "70-79": 50,
+   "80-89": 2,
+   "90-99": 9,
+   "100-109": 13,
+   "110-119": 15,
+   "120-129": 24,
+   "130-139": 51,
+   "140-149": 160,
+   "150-159": 24,
+   "160-169": 23,
+   "170-179": 28,
+   "180-189": 19,
+   "190-199": 3,
+   "200+": 833
+  },
+  "meta": {
+   "source": "Congreso de los Diputados, Datos abiertos: votaciones del Pleno",
+   "period": "2023-09-19 / 2026-09-29",
+   "url": "https://www.congreso.es/es/opendata/votaciones",
+   "unit": "votaciones por |sí−no|"
+  }
+ }
+}

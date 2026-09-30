@@ -1,0 +1,40 @@
+{
+ "generated": "2026-09-30T09:26:05+00:00",
+ "sources": [
+  {
+   "id": "congreso-votaciones",
+   "name": "Congreso de los Diputados, Datos abiertos: votaciones del Pleno",
+   "url": "https://www.congreso.es/es/opendata/votaciones",
+   "format": "HTML (calendario y enlaces) + JSON/XML por votación + ZIP por sesión",
+   "license": "Datos abiertos del Congreso de los Diputados (reutilización con cita de la fuente)",
+   "period": "2023-09-19 / 2026-09-29",
+   "accessed": "2026-09-30",
+   "auth": "ninguna"
+  },
+  {
+   "id": "congreso-diputados",
+   "name": "Congreso de los Diputados, Datos abiertos: diputados (activos y de baja)",
+   "url": "https://www.congreso.es/es/opendata/diputados",
+   "format": "JSON/CSV",
+   "license": "Datos abiertos del Congreso de los Diputados",
+   "period": "legislatura XV",
+   "accessed": "2026-09-30",
+   "auth": "ninguna",
+   "fields_used": [
+    "NOMBRE",
+    "CIRCUNSCRIPCION",
+    "FORMACIONELECTORAL",
+    "FECHAALTA",
+    "FECHABAJA",
+    "GRUPOPARLAMENTARIO"
+   ],
+   "fields_excluded": [
+    "BIOGRAFIA"
+   ]
+  }
+ ],
+ "scripts": [
+  "scripts/congreso_fetch.py",
+  "scripts/congreso_build.py"
+ ]
+}

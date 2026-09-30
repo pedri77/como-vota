@@ -3,78 +3,202 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mi observatorio de datos</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23e8590c%27/%3E%3C/svg%3E">
-<meta name="description" content="Observatorio de datos públicos construido con la plantilla de IAcademy.">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<title>Cómo vota tu diputado · Legislatura XV en datos</title>
+<meta name="description" content="Las 2.153 votaciones nominales del Congreso en la legislatura XV: cohesión de cada grupo, coincidencia entre grupos y la ficha de voto de cada diputado. Datos oficiales del Congreso.">
+<meta property="og:title" content="Cómo vota tu diputado">
+<meta property="og:description" content="De 724.238 votos emitidos, solo 602 se apartaron de su propio grupo. El 0,083 %.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%232f6f4e%27/%3E%3C/svg%3E">
 <style>
-  :root { --bg: #f5f6f4; --paper: #fff; --ink: #1b1f24; --ink-2: #555f6a; --line: #d9ddd6; --accent: #e8590c;
-          --c1: #fde9d9; --c2: #f9b98a; --c3: #f08a4b; --c4: #d9480f; --c5: #8a2b06; color-scheme: light; }
-  @media (prefers-color-scheme: dark) { :root { --bg: #121417; --paper: #1b1e22; --ink: #eceef0; --ink-2: #a5adb6; --line: #2d3238; color-scheme: dark; } }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
-  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
-  h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.1; margin: 8px 0 8px; }
-  .lede { color: var(--ink-2); max-width: 65ch; }
-  .grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 20px; margin-top: 20px; }
-  @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
-  #map { height: 480px; border-radius: 8px; border: 1px solid var(--line); background: var(--paper); }
-  .card { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 16px; overflow-x: auto; }
-  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: .92rem; }
-  th, td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: left; }
-  td.r, th.r { text-align: right; }
-  th { font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-2); cursor: pointer; }
-  .fuente { font-size: .85rem; color: var(--ink-2); margin-top: 16px; }
-  .kpi { font-size: 2.4rem; font-weight: 800; }
-  a { color: var(--accent); }
+  :root { --bg:#f4f5f3; --paper:#fff; --ink:#191d1a; --ink-2:#5a635c; --line:#d7ddd6; --accent:#2f6f4e;
+          --si:#2f6f4e; --no:#b3382f; --abs:#c08b2e; --nv:#9aa39c; color-scheme: light; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#111512; --paper:#191e1a; --ink:#eef1ee; --ink-2:#a3aca5; --line:#2a312c; --accent:#5fbf8c; --si:#5fbf8c; --no:#e0645a; --abs:#e0b25a; --nv:#5e675f; color-scheme: dark; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  .wrap { max-width:1100px; margin:0 auto; padding:24px 20px 60px; }
+  h1 { font-size:clamp(1.9rem,4vw,3rem); line-height:1.08; margin:10px 0; letter-spacing:-.02em; }
+  h2 { font-size:1.35rem; margin:38px 0 6px; }
+  .lede { color:var(--ink-2); max-width:66ch; font-size:1.05rem; }
+  .eyebrow { font-size:.78rem; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); font-weight:700; margin:0; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; margin:26px 0 10px; }
+  .kpi { background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:16px; }
+  .kpi b { display:block; font-size:2rem; font-weight:800; line-height:1.1; font-variant-numeric:tabular-nums; }
+  .kpi span { color:var(--ink-2); font-size:.9rem; }
+  .card { background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:16px; overflow-x:auto; margin-top:12px; }
+  table { width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; font-size:.93rem; }
+  th,td { padding:8px 10px; border-bottom:1px solid var(--line); text-align:left; }
+  td.r, th.r { text-align:right; }
+  th { font-size:.74rem; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2); }
+  .nota { font-size:.87rem; color:var(--ink-2); margin-top:10px; }
+  .aviso { border-left:3px solid var(--accent); padding:10px 14px; background:var(--paper); border-radius:0 8px 8px 0; margin:18px 0; }
+  a { color:var(--accent); }
+  input, select { font:inherit; padding:8px 12px; border-radius:8px; border:1px solid var(--line); background:var(--paper); color:var(--ink); width:100%; max-width:420px; }
+  svg { width:100%; height:auto; display:block; }
+  .ficha { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:10px; margin-top:12px; }
+  .ficha div { background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:12px; }
+  .ficha b { display:block; font-size:1.5rem; font-variant-numeric:tabular-nums; }
+  .ficha span { font-size:.82rem; color:var(--ink-2); }
+  .barra { display:flex; height:22px; border-radius:6px; overflow:hidden; margin-top:10px; }
+  .barra i { display:block; }
+  .leyenda { display:flex; gap:14px; flex-wrap:wrap; font-size:.84rem; color:var(--ink-2); margin-top:8px; }
+  .leyenda em { display:inline-block; width:12px; height:12px; border-radius:3px; margin-right:5px; vertical-align:-1px; font-style:normal; }
+  footer { margin-top:44px; border-top:1px solid var(--line); padding-top:16px; font-size:.87rem; color:var(--ink-2); }
 </style>
 </head>
 <body>
-<main class="wrap">
-  <p class="fuente">Plantilla de observatorio de datos · <a href="https://iacedemy.com/free/yt/construido-con-ia/">IAcademy</a></p>
-  <h1 id="titulo">Cargando…</h1>
-  <p class="lede">Ejemplo incluido en la plantilla: el dato se descarga cada día de la API del INE con GitHub Actions y se publica en GitHub Pages. Cámbialo por tu propia pregunta (ver README).</p>
-  <div class="kpi" id="kpi"></div>
-  <div class="grid">
-    <div id="map" role="region" aria-label="Mapa por comunidad autónoma"></div>
-    <div class="card"><table id="tabla"></table></div>
+<div class="wrap">
+  <p class="eyebrow">Construido con IA · IAcademy</p>
+  <h1>Cómo vota tu diputado</h1>
+  <p class="lede">Todas las votaciones nominales del Pleno del Congreso en la <strong>legislatura XV</strong>, tal y como las publica la propia Cámara. Cuánto vota cada grupo igual que otro, cuánto se desmarca cada diputado del suyo y qué votaciones se decidieron por un puñado de votos.</p>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="aviso">
+    <strong>Lo primero, para leerlo bien.</strong> Aquí no se juzga a nadie ni se opina sobre las leyes: se describe el sentido del voto que publica el Congreso. «No vota» es la categoría oficial de la Cámara y <strong>mezcla la ausencia con estar presente sin votar</strong>, así que no mide absentismo y por eso no ordenamos a nadie por ella.
   </div>
-  <p class="fuente" id="fuente"></p>
-</main>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<script>
-const nf = new Intl.NumberFormat("es-ES", { maximumFractionDigits: 0, useGrouping: "always" });
-const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-(async () => {
-  const [D, geo] = await Promise.all([fetch("data.json").then((r) => r.json()), fetch("ccaa.geojson").then((r) => r.json())]);
-  document.getElementById("titulo").textContent = `${D.titulo} (${D.periodo})`;
-  document.getElementById("kpi").textContent = `España: ${nf.format(D.datos.ES.valor)} ${D.unidad}`;
-  document.getElementById("fuente").innerHTML = `Fuente: <a href="${esc(D.fuente.url_web)}">${esc(D.fuente.nombre)}</a> · ${esc(D.fuente.licencia)} · descargado el ${esc(D.descargado)}`;
 
-  // Escala por cuantiles en 5 clases
-  const vals = Object.entries(D.datos).filter(([k]) => k !== "ES").map(([, d]) => d.valor).sort((a, b) => a - b);
-  const cortes = [1, 2, 3, 4].map((i) => vals[Math.floor((i * vals.length) / 5)]);
-  const clase = (v) => cortes.filter((c) => v >= c).length + 1;
-  const css = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  <h2>Los grupos votan en bloque</h2>
+  <div class="kpis" id="disidencia"></div>
+  <div class="card"><table id="t-grupos"></table></div>
+  <p class="nota">Cohesión = porcentaje de votos que coinciden con la posición mayoritaria del propio grupo. <strong>El Grupo Mixto va aparte</strong>: reúne a diputados de formaciones distintas, así que no tiene una posición común de la que apartarse y su cifra no es comparable.</p>
 
-  const map = L.map("map", { scrollWheelZoom: false }).fitBounds([[35.9, -9.4], [43.8, 4.4]]);
-  L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
-    { attribution: "Teselas © Esri, HERE, Garmin, © OpenStreetMap", maxNativeZoom: 16 }).addTo(map);
-  L.geoJSON(geo, {
-    style: (f) => { const d = D.datos[f.properties.code]; return { fillColor: d ? css(`--c${clase(d.valor)}`) : "#ccc", fillOpacity: .85, color: "#fff", weight: 1 }; },
-    onEachFeature: (f, l) => { const d = D.datos[f.properties.code]; l.bindTooltip(`${esc(f.properties.name)}<br>${d ? nf.format(d.valor) + " " + D.unidad : "Sin dato"}`, { sticky: true }); },
-  }).addTo(map);
+  <h2>Cuánto coincide cada grupo con cada otro</h2>
+  <div class="card"><svg id="g-matriz" role="img" aria-label="Matriz de coincidencia entre grupos"></svg></div>
+  <p class="nota">Porcentaje de votaciones en las que los dos grupos votaron lo mismo. Coincidir no es pactar: muchas votaciones son de trámite o de consenso amplio.</p>
 
-  // Tabla ordenable
-  let clave = "valor", dir = -1;
-  const filas = Object.entries(D.datos).filter(([k]) => k !== "ES").map(([, d]) => d);
-  const pintar = () => {
-    const ord = [...filas].sort((a, b) => (typeof a[clave] === "string" ? a[clave].localeCompare(b[clave], "es") : (a[clave] ?? -1e9) - (b[clave] ?? -1e9)) * dir);
-    document.getElementById("tabla").innerHTML = `<thead><tr><th data-k="nombre">Comunidad</th><th class="r" data-k="valor">${esc(D.unidad)}</th><th class="r" data-k="variacion">Interanual</th></tr></thead><tbody>${ord.map((d) => `<tr><td>${esc(d.nombre)}</td><td class="r">${nf.format(d.valor)}</td><td class="r">${d.variacion == null ? "—" : (d.variacion > 0 ? "+" : "") + d.variacion.toLocaleString("es-ES") + "%"}</td></tr>`).join("")}</tbody>`;
-    document.querySelectorAll("th").forEach((th) => (th.onclick = () => { dir = th.dataset.k === clave ? -dir : -1; clave = th.dataset.k; pintar(); }));
-  };
-  pintar();
-})();
+  <h2>Busca a tu diputado</h2>
+  <p style="margin:10px 0"><input id="q" list="dips" placeholder="Escribe un nombre, p. ej. González" autocomplete="off"><datalist id="dips"></datalist></p>
+  <div id="ficha"></div>
+
+  <h2>Las votaciones más ajustadas</h2>
+  <div class="card"><table id="t-ajustadas"></table></div>
+  <p class="nota" id="nota-ajustadas"></p>
+
+  <h2>Qué no está aquí</h2>
+  <div class="card" id="calidad"></div>
+
+  <footer>
+    <p><strong>Fuente:</strong> Congreso de los Diputados, portal de datos abiertos (<a href="https://www.congreso.es/es/opendata/votaciones">votaciones</a> y <a href="https://www.congreso.es/es/opendata/diputados">diputados</a>). <span id="gen"></span> Agregados de elaboración propia; el Congreso no participa ni avala esta reutilización.</p>
+    <p>Código y datos abiertos: <a href="https://github.com/pedri77/como-vota">github.com/pedri77/como-vota</a> · Serie <a href="https://iacedemy.com/free/yt/construido-con-ia/">«Construido con IA»</a> de IAcademy · <a href="https://iacedemy.com/kit-observatorio">Kit gratis para construir el tuyo</a></p>
+  </footer>
+</div>
+
+<script type="module">
+const N = (v, d = 0) => (v ?? 0).toLocaleString('es-ES', { minimumFractionDigits: d, maximumFractionDigits: d });
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const val = (x) => (x && typeof x === 'object' && 'value' in x ? x.value : x);
+
+const D = {};
+for (const f of ['resumen', 'diputados', 'grupos', 'votaciones_ajustadas', 'calidad'])
+  D[f] = await (await fetch(`data/${f}.json`)).json();
+
+const R = D.resumen, DIP = D.diputados.diputados, GR = D.grupos.grupos, M = D.grupos.matriz_coincidencia;
+$('#gen').textContent = `Datos descargados el ${R.generated.slice(0, 10)}; legislatura ${R.legislatura}, del ${val(R.periodo).desde || R.periodo.desde} al ${val(R.periodo).hasta || R.periodo.hasta}.`;
+
+$('#kpis').innerHTML = [
+  [N(val(R.votaciones_nominales)), 'votaciones nominales'],
+  [N(val(R.diputados) ?? DIP.length), 'diputados en la legislatura'],
+  [N(val(R.sesiones_plenarias)), 'sesiones del Pleno'],
+  [N(val(R.votos_emitidos)), 'votos emitidos'],
+].map(([b, s]) => `<div class="kpi"><b>${b}</b><span>${s}</span></div>`).join('');
+
+// --- disidencia: la cifra del episodio, calculada aquí para que se pueda comprobar
+const fuera = DIP.filter((d) => d.grupo !== 'GMx' && d.coincidencia_pct != null && d.coincidencia_base > 200);
+const discrepantes = fuera.reduce((a, d) => a + d.votos_distintos_de_su_grupo, 0);
+const base = fuera.reduce((a, d) => a + d.coincidencia_base, 0);
+const nunca = fuera.filter((d) => d.votos_distintos_de_su_grupo === 0).length;
+$('#disidencia').innerHTML = [
+  [N(discrepantes), 'votos apartados de su grupo'],
+  [N(100 * discrepantes / base, 3) + ' %', 'de todos los votos emitidos'],
+  [N(nunca), `diputados que no se desmarcaron nunca (de ${N(fuera.length)})`],
+].map(([b, s]) => `<div class="kpi"><b>${b}</b><span>${s}</span></div>`).join('');
+
+const filas = (el, cols, datos) => {
+  el.innerHTML = `<thead><tr>${cols.map((c) => `<th class="${c.r ? 'r' : ''}">${c.t}</th>`).join('')}</tr></thead>`
+    + `<tbody>${datos.map((f) => `<tr>${cols.map((c) => `<td class="${c.r ? 'r' : ''}">${c.v(f)}</td>`).join('')}</tr>`).join('')}</tbody>`;
+};
+
+filas($('#t-grupos'), [
+  { t: 'Grupo', v: (g) => esc(g.nombre) },
+  { t: 'Diputados', r: 1, v: (g) => N(g.diputados_que_han_pertenecido) },
+  { t: 'Votaciones', r: 1, v: (g) => N(g.votaciones_con_votos_emitidos) },
+  { t: 'Cohesión', r: 1, v: (g) => (g.grupo === 'GMx' ? '— <span style="color:var(--ink-2)">(no comparable)</span>' : N(g.cohesion_media_pct, 1) + ' %') },
+], GR);
+
+// --- matriz como mapa de calor
+{
+  const ks = M.grupos, V = M.valores, n = ks.length;
+  const nom = Object.fromEntries(GR.map((g) => [g.grupo, g.nombre]));
+  // T deja sitio a las etiquetas rotadas: con menos, el nombre del grupo pisa la primera fila.
+  const C = 62, L = 150, T = 150, W = L + C * n + 130, H = T + C * n + 10;
+  const el = $('#g-matriz'); el.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  const get = (a, b) => (a === b ? 100 : V[a][b].coincidencia_pct);
+  const NS = 'http://www.w3.org/2000/svg';
+  const add = (t, a, txt) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (txt != null) e.textContent = txt; el.appendChild(e); return e; };
+  el.innerHTML = '';
+  // Giro +45 con anclaje al inicio: así el nombre sale hacia ARRIBA y a la derecha. Con -45 y
+  // anclaje al final, los nombres largos (Junts per Catalunya) caían dentro de la primera fila.
+  ks.forEach((b, j) => add('text', { x: L + C * j + C / 2, y: T - 12, 'text-anchor': 'start', 'font-size': 12, fill: 'currentColor',
+    transform: `rotate(-45 ${L + C * j + C / 2} ${T - 12})` }, nom[b] || b));
+  ks.forEach((a, i) => {
+    add('text', { x: L - 10, y: T + C * i + C / 2 + 4, 'text-anchor': 'end', 'font-size': 12, fill: 'currentColor' }, nom[a] || a);
+    ks.forEach((b, j) => {
+      const v = get(a, b), x = L + C * j, y = T + C * i;
+      add('rect', { x, y, width: C - 3, height: C - 3, rx: 4, fill: 'var(--accent)', 'fill-opacity': a === b ? 0.12 : (v / 100) ** 1.6 });
+      add('text', { x: x + (C - 3) / 2, y: y + C / 2 + 4, 'text-anchor': 'middle', 'font-size': 12.5,
+        'font-weight': v >= 70 ? 700 : 400, fill: a === b ? 'var(--ink-2)' : 'currentColor' }, a === b ? '—' : N(v, 0));
+    });
+  });
+}
+
+// --- buscador de diputado
+const orden = [...DIP].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
+$('#dips').innerHTML = orden.map((d) => `<option value="${esc(d.nombre)}">`).join('');
+const nombreGrupo = Object.fromEntries(GR.map((g) => [g.grupo, g.nombre]));
+
+function ficha(d) {
+  const tot = d.si + d.no + d.abstencion + d.no_vota || 1;
+  const seg = [['si', d.si, 'A favor'], ['no', d.no, 'En contra'], ['abs', d.abstencion, 'Abstención'], ['nv', d.no_vota, 'No vota']];
+  const mixto = d.grupo === 'GMx';
+  $('#ficha').innerHTML = `
+    <p style="margin:14px 0 0"><strong style="font-size:1.2rem">${esc(d.nombre)}</strong><br>
+      <span style="color:var(--ink-2)">${esc(nombreGrupo[d.grupo] || d.grupo)} · ${esc(d.circunscripcion || '')} · ${esc(d.formacion_electoral || '')}${d.fecha_baja ? ` · baja el ${d.fecha_baja}` : ''}</span></p>
+    <div class="barra">${seg.map(([k, v]) => `<i style="width:${100 * v / tot}%;background:var(--${k})" title="${v}"></i>`).join('')}</div>
+    <div class="leyenda">${seg.map(([k, v, t]) => `<span><em style="background:var(--${k})"></em>${t}: ${N(v)}</span>`).join('')}</div>
+    <div class="ficha">
+      <div><b>${N(d.votaciones_posibles)}</b><span>votaciones en las que podía votar</span></div>
+      <div><b>${mixto ? '—' : N(d.coincidencia_pct, 1) + ' %'}</b><span>${mixto ? 'el Grupo Mixto no tiene posición común' : 'coincidencia con su grupo'}</span></div>
+      <div><b>${mixto ? '—' : N(d.votos_distintos_de_su_grupo)}</b><span>${mixto ? '' : 'veces que votó distinto a su grupo'}</span></div>
+    </div>
+    <p class="nota">El denominador es el número de votaciones en las que esta persona figuraba en el listado, no el total de la legislatura: quien se incorporó o causó baja no sale perjudicado en los porcentajes.</p>`;
+}
+$('#q').addEventListener('input', (e) => {
+  const d = DIP.find((x) => x.nombre.toLowerCase() === e.target.value.toLowerCase());
+  if (d) ficha(d);
+});
+ficha(orden.find((d) => d.votos_distintos_de_su_grupo > 0 && d.grupo !== 'GMx') || orden[0]);
+
+// --- votaciones más ajustadas
+const AJ = D.votaciones_ajustadas.mas_ajustadas.slice(0, 15);
+filas($('#t-ajustadas'), [
+  { t: 'Fecha', v: (v) => v.fecha },
+  { t: 'Asunto', v: (v) => esc((v.texto || v.titulo || '').slice(0, 120)) },
+  { t: 'Sí', r: 1, v: (v) => N(v.si) },
+  { t: 'No', r: 1, v: (v) => N(v.no) },
+  { t: 'Margen', r: 1, v: (v) => N(Math.abs(v.si - v.no)) },
+], AJ);
+$('#nota-ajustadas').textContent = `Las ${AJ.length} votaciones con menor diferencia entre síes y noes. El fichero del Congreso no dice si el texto salió adelante: aquí solo se publica el recuento y el margen.`;
+
+// --- qué no está aquí
+const c = D.calidad;
+$('#calidad').innerHTML = `
+  <p style="margin-top:0">Todo lo que la fuente no permite contar, contado:</p>
+  <ul style="margin:0 0 6px; padding-left:20px">
+    <li><strong>${N(c.lectura?.llamamiento_con_totales ?? c.sin_fichero_nominal?.llamamiento_con_totales ?? 13)} votaciones públicas por llamamiento</strong> (investiduras, la votación final de la amnistía, la reforma del artículo 49): el Congreso publica los totales pero no el voto de cada diputado, que solo consta en el Diario de Sesiones.</li>
+    <li><strong>Votaciones secretas</strong>: no se publica ni el recuento por persona.</li>
+    <li><strong>Votaciones repetidas por empate</strong> (artículo 88 del Reglamento): se conservan las dos y se avisa.</li>
+    <li><strong>Voto telemático</strong>: los ficheros no lo distinguen del presencial.</li>
+  </ul>`;
 </script>
 </body>
 </html>

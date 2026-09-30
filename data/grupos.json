@@ -1,0 +1,448 @@
+{
+ "generated": "2026-09-30T09:26:05+00:00",
+ "legislatura": "XV",
+ "meta": {
+  "source": "Congreso de los Diputados, Datos abiertos: votaciones del Pleno",
+  "period": "2023-09-19 / 2026-09-29",
+  "url": "https://www.congreso.es/es/opendata/votaciones",
+  "unit": "porcentaje",
+  "note": "cohesión = media, por votación, del porcentaje de votos emitidos del grupo que coinciden con su posición mayoritaria"
+ },
+ "grupos": [
+  {
+   "grupo": "GS",
+   "nombre": "Socialista",
+   "diputados_que_han_pertenecido": 157,
+   "votaciones_con_votos_emitidos": 2153,
+   "votaciones_sin_posicion_por_empate": 0,
+   "cohesion_media_pct": 100.0
+  },
+  {
+   "grupo": "GP",
+   "nombre": "Popular",
+   "diputados_que_han_pertenecido": 151,
+   "votaciones_con_votos_emitidos": 2151,
+   "votaciones_sin_posicion_por_empate": 0,
+   "cohesion_media_pct": 99.9
+  },
+  {
+   "grupo": "GSUMAR",
+   "nombre": "Sumar",
+   "diputados_que_han_pertenecido": 36,
+   "votaciones_con_votos_emitidos": 2153,
+   "votaciones_sin_posicion_por_empate": 0,
+   "cohesion_media_pct": 99.8
+  },
+  {
+   "grupo": "GVOX",
+   "nombre": "VOX",
+   "diputados_que_han_pertenecido": 34,
+   "votaciones_con_votos_emitidos": 2151,
+   "votaciones_sin_posicion_por_empate": 0,
+   "cohesion_media_pct": 99.9
+  },
+  {
+   "grupo": "GMx",
+   "nombre": "Mixto",
+   "diputados_que_han_pertenecido": 11,
+   "votaciones_con_votos_emitidos": 2153,
+   "votaciones_sin_posicion_por_empate": 36,
+   "cohesion_media_pct": 80.1
+  },
+  {
+   "grupo": "GJxCAT",
+   "nombre": "Junts per Catalunya",
+   "diputados_que_han_pertenecido": 8,
+   "votaciones_con_votos_emitidos": 2132,
+   "votaciones_sin_posicion_por_empate": 0,
+   "cohesion_media_pct": 99.9
+  },
+  {
+   "grupo": "GR",
+   "nombre": "Republicano",
+   "diputados_que_han_pertenecido": 8,
+   "votaciones_con_votos_emitidos": 2149,
+   "votaciones_sin_posicion_por_empate": 0,
+   "cohesion_media_pct": 99.7
+  },
+  {
+   "grupo": "GEH Bildu",
+   "nombre": "Euskal Herria Bildu",
+   "diputados_que_han_pertenecido": 7,
+   "votaciones_con_votos_emitidos": 2147,
+   "votaciones_sin_posicion_por_empate": 0,
+   "cohesion_media_pct": 99.6
+  },
+  {
+   "grupo": "GV (EAJ-PNV)",
+   "nombre": "Vasco (EAJ-PNV)",
+   "diputados_que_han_pertenecido": 6,
+   "votaciones_con_votos_emitidos": 2127,
+   "votaciones_sin_posicion_por_empate": 0,
+   "cohesion_media_pct": 99.8
+  }
+ ],
+ "matriz_coincidencia": {
+  "meta": {
+   "source": "Congreso de los Diputados, Datos abiertos: votaciones del Pleno",
+   "period": "2023-09-19 / 2026-09-29",
+   "url": "https://www.congreso.es/es/opendata/votaciones",
+   "unit": "porcentaje de votaciones en que ambos grupos tuvieron la misma posición mayoritaria"
+  },
+  "grupos": [
+   "GS",
+   "GP",
+   "GSUMAR",
+   "GVOX",
+   "GMx",
+   "GJxCAT",
+   "GR",
+   "GEH Bildu",
+   "GV (EAJ-PNV)"
+  ],
+  "valores": {
+   "GS": {
+    "GP": {
+     "votaciones_comparables": 2151,
+     "coincidencia_pct": 38.7
+    },
+    "GSUMAR": {
+     "votaciones_comparables": 2153,
+     "coincidencia_pct": 83.1
+    },
+    "GVOX": {
+     "votaciones_comparables": 2151,
+     "coincidencia_pct": 29.8
+    },
+    "GMx": {
+     "votaciones_comparables": 2117,
+     "coincidencia_pct": 68.6
+    },
+    "GJxCAT": {
+     "votaciones_comparables": 2132,
+     "coincidencia_pct": 62.3
+    },
+    "GR": {
+     "votaciones_comparables": 2149,
+     "coincidencia_pct": 64.7
+    },
+    "GEH Bildu": {
+     "votaciones_comparables": 2147,
+     "coincidencia_pct": 66.9
+    },
+    "GV (EAJ-PNV)": {
+     "votaciones_comparables": 2127,
+     "coincidencia_pct": 74.9
+    },
+    "GS": {
+     "votaciones_comparables": null,
+     "coincidencia_pct": 100.0
+    }
+   },
+   "GP": {
+    "GS": {
+     "votaciones_comparables": 2151,
+     "coincidencia_pct": 38.7
+    },
+    "GSUMAR": {
+     "votaciones_comparables": 2151,
+     "coincidencia_pct": 31.4
+    },
+    "GVOX": {
+     "votaciones_comparables": 2151,
+     "coincidencia_pct": 62.6
+    },
+    "GMx": {
+     "votaciones_comparables": 2115,
+     "coincidencia_pct": 28.1
+    },
+    "GJxCAT": {
+     "votaciones_comparables": 2130,
+     "coincidencia_pct": 38.1
+    },
+    "GR": {
+     "votaciones_comparables": 2147,
+     "coincidencia_pct": 26.0
+    },
+    "GEH Bildu": {
+     "votaciones_comparables": 2145,
+     "coincidencia_pct": 22.8
+    },
+    "GV (EAJ-PNV)": {
+     "votaciones_comparables": 2125,
+     "coincidencia_pct": 37.4
+    },
+    "GP": {
+     "votaciones_comparables": null,
+     "coincidencia_pct": 100.0
+    }
+   },
+   "GSUMAR": {
+    "GS": {
+     "votaciones_comparables": 2153,
+     "coincidencia_pct": 83.1
+    },
+    "GP": {
+     "votaciones_comparables": 2151,
+     "coincidencia_pct": 31.4
+    },
+    "GVOX": {
+     "votaciones_comparables": 2151,
+     "coincidencia_pct": 21.8
+    },
+    "GMx": {
+     "votaciones_comparables": 2117,
+     "coincidencia_pct": 80.2
+    },
+    "GJxCAT": {
+     "votaciones_comparables": 2132,
+     "coincidencia_pct": 60.3
+    },
+    "GR": {
+     "votaciones_comparables": 2149,
+     "coincidencia_pct": 73.0
+    },
+    "GEH Bildu": {
+     "votaciones_comparables": 2147,
+     "coincidencia_pct": 78.8
+    },
+    "GV (EAJ-PNV)": {
+     "votaciones_comparables": 2127,
+     "coincidencia_pct": 70.1
+    },
+    "GSUMAR": {
+     "votaciones_comparables": null,
+     "coincidencia_pct": 100.0
+    }
+   },
+   "GVOX": {
+    "GS": {
+     "votaciones_comparables": 2151,
+     "coincidencia_pct": 29.8
+    },
+    "GP": {
+     "votaciones_comparables": 2151,
+     "coincidencia_pct": 62.6
+    },
+    "GSUMAR": {
+     "votaciones_comparables": 2151,
+     "coincidencia_pct": 21.8
+    },
+    "GMx": {
+     "votaciones_comparables": 2115,
+     "coincidencia_pct": 18.9
+    },
+    "GJxCAT": {
+     "votaciones_comparables": 2130,
+     "coincidencia_pct": 28.7
+    },
+    "GR": {
+     "votaciones_comparables": 2147,
+     "coincidencia_pct": 16.9
+    },
+    "GEH Bildu": {
+     "votaciones_comparables": 2145,
+     "coincidencia_pct": 15.2
+    },
+    "GV (EAJ-PNV)": {
+     "votaciones_comparables": 2125,
+     "coincidencia_pct": 27.5
+    },
+    "GVOX": {
+     "votaciones_comparables": null,
+     "coincidencia_pct": 100.0
+    }
+   },
+   "GMx": {
+    "GS": {
+     "votaciones_comparables": 2117,
+     "coincidencia_pct": 68.6
+    },
+    "GP": {
+     "votaciones_comparables": 2115,
+     "coincidencia_pct": 28.1
+    },
+    "GSUMAR": {
+     "votaciones_comparables": 2117,
+     "coincidencia_pct": 80.2
+    },
+    "GVOX": {
+     "votaciones_comparables": 2115,
+     "coincidencia_pct": 18.9
+    },
+    "GJxCAT": {
+     "votaciones_comparables": 2096,
+     "coincidencia_pct": 60.5
+    },
+    "GR": {
+     "votaciones_comparables": 2113,
+     "coincidencia_pct": 80.5
+    },
+    "GEH Bildu": {
+     "votaciones_comparables": 2111,
+     "coincidencia_pct": 82.1
+    },
+    "GV (EAJ-PNV)": {
+     "votaciones_comparables": 2091,
+     "coincidencia_pct": 61.8
+    },
+    "GMx": {
+     "votaciones_comparables": null,
+     "coincidencia_pct": 100.0
+    }
+   },
+   "GJxCAT": {
+    "GS": {
+     "votaciones_comparables": 2132,
+     "coincidencia_pct": 62.3
+    },
+    "GP": {
+     "votaciones_comparables": 2130,
+     "coincidencia_pct": 38.1
+    },
+    "GSUMAR": {
+     "votaciones_comparables": 2132,
+     "coincidencia_pct": 60.3
+    },
+    "GVOX": {
+     "votaciones_comparables": 2130,
+     "coincidencia_pct": 28.7
+    },
+    "GMx": {
+     "votaciones_comparables": 2096,
+     "coincidencia_pct": 60.5
+    },
+    "GR": {
+     "votaciones_comparables": 2128,
+     "coincidencia_pct": 66.9
+    },
+    "GEH Bildu": {
+     "votaciones_comparables": 2127,
+     "coincidencia_pct": 64.0
+    },
+    "GV (EAJ-PNV)": {
+     "votaciones_comparables": 2106,
+     "coincidencia_pct": 67.2
+    },
+    "GJxCAT": {
+     "votaciones_comparables": null,
+     "coincidencia_pct": 100.0
+    }
+   },
+   "GR": {
+    "GS": {
+     "votaciones_comparables": 2149,
+     "coincidencia_pct": 64.7
+    },
+    "GP": {
+     "votaciones_comparables": 2147,
+     "coincidencia_pct": 26.0
+    },
+    "GSUMAR": {
+     "votaciones_comparables": 2149,
+     "coincidencia_pct": 73.0
+    },
+    "GVOX": {
+     "votaciones_comparables": 2147,
+     "coincidencia_pct": 16.9
+    },
+    "GMx": {
+     "votaciones_comparables": 2113,
+     "coincidencia_pct": 80.5
+    },
+    "GJxCAT": {
+     "votaciones_comparables": 2128,
+     "coincidencia_pct": 66.9
+    },
+    "GEH Bildu": {
+     "votaciones_comparables": 2147,
+     "coincidencia_pct": 84.8
+    },
+    "GV (EAJ-PNV)": {
+     "votaciones_comparables": 2123,
+     "coincidencia_pct": 64.2
+    },
+    "GR": {
+     "votaciones_comparables": null,
+     "coincidencia_pct": 100.0
+    }
+   },
+   "GEH Bildu": {
+    "GS": {
+     "votaciones_comparables": 2147,
+     "coincidencia_pct": 66.9
+    },
+    "GP": {
+     "votaciones_comparables": 2145,
+     "coincidencia_pct": 22.8
+    },
+    "GSUMAR": {
+     "votaciones_comparables": 2147,
+     "coincidencia_pct": 78.8
+    },
+    "GVOX": {
+     "votaciones_comparables": 2145,
+     "coincidencia_pct": 15.2
+    },
+    "GMx": {
+     "votaciones_comparables": 2111,
+     "coincidencia_pct": 82.1
+    },
+    "GJxCAT": {
+     "votaciones_comparables": 2127,
+     "coincidencia_pct": 64.0
+    },
+    "GR": {
+     "votaciones_comparables": 2147,
+     "coincidencia_pct": 84.8
+    },
+    "GV (EAJ-PNV)": {
+     "votaciones_comparables": 2121,
+     "coincidencia_pct": 64.4
+    },
+    "GEH Bildu": {
+     "votaciones_comparables": null,
+     "coincidencia_pct": 100.0
+    }
+   },
+   "GV (EAJ-PNV)": {
+    "GS": {
+     "votaciones_comparables": 2127,
+     "coincidencia_pct": 74.9
+    },
+    "GP": {
+     "votaciones_comparables": 2125,
+     "coincidencia_pct": 37.4
+    },
+    "GSUMAR": {
+     "votaciones_comparables": 2127,
+     "coincidencia_pct": 70.1
+    },
+    "GVOX": {
+     "votaciones_comparables": 2125,
+     "coincidencia_pct": 27.5
+    },
+    "GMx": {
+     "votaciones_comparables": 2091,
+     "coincidencia_pct": 61.8
+    },
+    "GJxCAT": {
+     "votaciones_comparables": 2106,
+     "coincidencia_pct": 67.2
+    },
+    "GR": {
+     "votaciones_comparables": 2123,
+     "coincidencia_pct": 64.2
+    },
+    "GEH Bildu": {
+     "votaciones_comparables": 2121,
+     "coincidencia_pct": 64.4
+    },
+    "GV (EAJ-PNV)": {
+     "votaciones_comparables": null,
+     "coincidencia_pct": 100.0
+    }
+   }
+  }
+ }
+}
